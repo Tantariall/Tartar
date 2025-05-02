@@ -1,0 +1,17 @@
+@font-face {
+	font-family: MainFont;
+	src: url('XI20.ttf');
+}
+
+
+body {
+    background-color: rgb(27, 27, 27);
+    color:white;
+    font-family: MainFont;
+    font-size: 150%;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 600;
+}
