@@ -1,26 +1,45 @@
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="loading">LOADING</div>
 
-  <head>
+  <div class="points-container">
+    <div style="font-size: 110%;">You have <div id="points">0</div> points</div>
+    <div>You gain <div id="points-growth">0</div> points per second</div>
+  </div>
 
-    <meta charset="utf-8">
+  <div class="tabs-container">
+    <div id="upgrades-tab" onclick="tab('u')">⦾<div inert class="tooltip">Upgrades</div></div>
+    <div id="settings-tab" onclick="tab('s')">🖫<div inert class="tooltip">Settings</div></div>
+    <div id="story-tab" onclick="tab('story')">🖈<div inert class="tooltip">Story</div></div>
+    <div id="ach-tab" onclick="tab('ach')">🏱<div inert class="tooltip">Achievements</div></div>
+  </div>
 
-    <title>Game</title>
-
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="main.css">
-
-  </head>
-
-  <body>
-
-    <span>You have <mainnum id="points">0</mainnum> points.</span>
-
-    <div style="
-    width:fit-content;
-    margin:auto;
-    " id="pointGrowth">0</div>
-    
-    <button onclick="TestBoost()">Click</button>
-  </body>
+  <div class="upgrades-container u">
+    <div id="u11" onclick="buy(u11)"></div>
+    <div id="u12" onclick="buy(u12)"></div>
+  </div>
+  <div class="upgrades-info-container u">
+    <div inert class="upgrade-title info"></div>
+    <div inert class="upgrade-desc info"></div>
+    <div inert class="upgrade-effect info"></div>
+  </div>
+  <div class="s">
+    <div id="offline-time" onclick="offline_progress()"></div>
+  </div>
+  <div class="story">PLACEHOLDER</div>
+</body>
+<script src="js/break_eternity.js"></script>
+<script src="js/save.js"></script>
+<script src="js/format.js"></script>
+<script src="js/loop.js"></script>
+<script src="js/main.js"></script>
+<script src="js/upgrades.js"></script>
+<script src="js/UI.js"></script>
 
 </html>
